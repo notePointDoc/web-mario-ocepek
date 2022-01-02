@@ -13,13 +13,13 @@ export default function (req, res) {
 	const { email, name, message } = req.body
 	const mailData = {
 		from: "lawebdelmario@gmail.com",
-		to: "correodelamierdaaa@gmail.com",
-		subject: `${req.body.name} quiere hacer música contigo!!!`,
+		to: "mario.ocepek.music@gmail.com",
+		subject: `TU PAGINA WEB`,
 		text: message + " | Sent from: " + email,
 		html: `<div> 
-		<h1>Nombre: ${req.body.name}</h1>
-		<p> ${req.body.message}</p>
-		<p> Contacto: ${req.body.email}</p>
+		<h1>Nombre: ${name}</h1>
+		<p> ${message}</p>
+		<p> Contacto: ${email}</p>
 		</div>`,
 	}
 	transporter.sendMail(mailData, function (err, info) {
