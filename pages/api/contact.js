@@ -3,6 +3,7 @@ let nodemailer = require("nodemailer")
 export default async (req, res) => {
 	const password = process.env.GMAIL_PASWORD
 	const { name, email, message } = req.body
+	console.log("ESTA ES LA ACTUALIZADA")
 	const transporter = nodemailer.createTransport({
 		port: 465,
 		host: "smtp.gmail.com",
