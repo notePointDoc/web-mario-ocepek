@@ -10,7 +10,7 @@ const About = () => {
 	const [state, setState] = useState(initState)
 	const slides = state.map((e) => {
 		return (
-			<div className={`${styles[e]} ${styles.section}`}>
+			<div className={`${styles[e]} ${styles.section}`} key={e}>
 				<AboutSlide state={e}></AboutSlide>
 			</div>
 		)

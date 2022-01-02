@@ -1,7 +1,7 @@
 import React from "react"
 import { menuVectors } from "../../assets/vectors/mainMenu"
 import styles from "./button.module.css"
-import Link from "next/Link"
+import Link from "next/link"
 
 const Button = (props) => {
 	let link = `/${props.reference}`

@@ -78,6 +78,7 @@ const collab = () => {
 	const onSubmitHandler = (event) => {
 		event.preventDefault()
 		const input = checkInput()
+		console.log(info)
 		if (input) {
 			// Sends the user data to the API
 			fetch("/api/contact", {
