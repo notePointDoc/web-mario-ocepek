@@ -1,0 +1,15 @@
+.track {
+	width: fit-content;
+	height: fit-content;
+	place-self: center;
+}
+.inactive {
+	transition: all 100ms ease-in-out;
+}
+.track > p {
+	font-family: fantasy;
+	font-weight: 700;
+	padding: 0.2rem;
+	position: absolute;
+	margin: 1rem;
+}

@@ -1,0 +1,8 @@
+.aboutWrapper {
+	display: grid;
+	grid-auto-flow: row;
+}
+.aboutWrapper > div {
+	margin-top: 3rem;
+	margin-bottom: 10rem;
+}

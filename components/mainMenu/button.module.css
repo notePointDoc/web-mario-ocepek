@@ -1,0 +1,28 @@
+.listElement {
+	display: flex;
+	width: 8rem;
+	overflow: visible;
+	position: relative;
+	list-style-type: none;
+	padding: 2rem;
+	margin: 1rem;
+	transition: 200ms ease-in-out;
+}
+.link {
+	position: absolute;
+	text-align: center;
+	font-weight: 300;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.listElement > svg {
+	position: absolute;
+	width: 100%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.p {
+	font-style: italic;
+}

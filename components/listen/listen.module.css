@@ -1,0 +1,9 @@
+.listen {
+	padding-top: 2rem;
+	display: grid;
+	grid-template-columns: repeat(3, 0.3fr);
+	justify-content: center;
+	gap: 5rem;
+	overflow: hidden;
+	z-index: 10;
+}

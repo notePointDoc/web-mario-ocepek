@@ -1,0 +1,367 @@
+/* FIRST SLIDE */
+.about-marioRedondo {
+	margin: 1rem;
+	width: 120%;
+	bottom: -1.5%;
+	left: 8.5%;
+	z-index: 3;
+}
+/* SECOND SLIDE */
+.allImg {
+	z-index: 4;
+}
+.allImg .work-img {
+	border: 1px solid black;
+}
+.work-polaroidOne {
+	width: 56.71%;
+	height: 69.36%;
+	top: 3%;
+	right: -25%;
+	z-index: 2;
+}
+.work-polaroidTwo {
+	height: 50.4%;
+	width: 42%;
+	top: -25%;
+	right: 25%;
+}
+.work-polaroidThree {
+	width: 42%;
+	height: 50.5%;
+	top: 13%;
+	left: -10%;
+}
+/* THRID SLIDE */
+.concerts-satelliteStrike {
+	top: -6%;
+	left: 15%;
+}
+/* Images */
+.concerts-concertsOne {
+	top: 3%;
+	left: 20%;
+	z-index: 3;
+}
+.concerts-concertsTwo {
+	top: -35%;
+	right: -10%;
+}
+.concerts-concertsThree {
+	bottom: 20%;
+	left: -15%;
+}
+
+/* ANIMATIONS */
+.about-img {
+	animation-name: fadeIn;
+	animation-duration: 2000ms;
+}
+.work-img {
+	animation-name: workImages;
+	animation-duration: 2500ms;
+	animation-timing-function: ease-in-out;
+}
+.concerts-concertsOne {
+	animation-name: concertsOne;
+	animation-duration: 2500ms;
+	animation-timing-function: ease-out;
+}
+.concerts-concertsTwo {
+	animation-name: conertTwo;
+	animation-duration: 1000ms;
+	animation-timing-function: ease-out;
+}
+.concerts-concertsThree {
+	animation-name: conertTwo;
+	animation-duration: 500ms;
+	animation-timing-function: ease-out;
+}
+@keyframes elementAppear {
+	from {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(130%);
+	}
+	90% {
+		transform: scale(90%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes oval-animation {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes appear {
+	from {
+		transform: scale3d(120%, 0, 120%);
+	}
+	50% {
+		transform: scale3d(120%, 0, 120%);
+	}
+	to {
+		transform: scale3d(100%, 100%, 100%);
+	}
+}
+@keyframes fadeIn {
+	from {
+		transform: scale(0) translateX(-400px);
+	}
+	to {
+		transform: scale(100%) translateX(0);
+	}
+}
+@keyframes dash {
+	from {
+		opacity: 0;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
+	70% {
+		opacity: 0;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
+	to {
+		opacity: 1;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(780deg) scale(0);
+	}
+	50% {
+		transform: rotate(780deg) scale(0);
+	}
+	80% {
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform: rotate(0) scale(90%);
+	}
+	to {
+		trasform: rotate(0) scale(100%);
+	}
+}
+@keyframes rotateDiamond {
+	from {
+		transform: rotate(0) scale(0);
+	}
+	50% {
+		transform: rotate(360deg) scale(0);
+	}
+	80% {
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform: rotate(60deg) scale(80%);
+	}
+	to {
+		trasform: rotate(60deg) scale(100%);
+	}
+}
+@keyframes bounce {
+	0% {
+		bottom: 100%;
+		right: 100%;
+	}
+	10% {
+		bottom: 16%;
+		right: 30%;
+	}
+	20% {
+		bottom: 50%;
+		right: -35%;
+	}
+	30% {
+		bottom: 90%;
+		right: -30%;
+	}
+	40% {
+		bottom: 100%;
+		right: -25%;
+	}
+	50% {
+		bottom: 90%;
+		right: -20%;
+	}
+	75% {
+		bottom: 16%;
+		right: -35%;
+	}
+	90% {
+		bottom: 20%;
+		right: -35%;
+	}
+	100% {
+		bottom: 16%;
+		right: -35%;
+	}
+}
+@keyframes rotateTriangle {
+	from {
+		transform-origin: right;
+		transform: rotate(0) scale(0);
+	}
+	50% {
+		transform-origin: right;
+		transform: rotate(780deg) scale(0);
+	}
+	80% {
+		transform-origin: right;
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform-origin: right;
+		transform: rotate(0) scale(90%);
+	}
+	to {
+		transform-origin: right;
+		transform: rotate(0) scale(100%);
+	}
+}
+@keyframes cubeAnimation {
+	from {
+		transform: rotate3d(-0.45, 0.45, -0.45, 1turn) scale(0);
+	}
+	50% {
+		transform: rotate3d(-0.45, 0.45, -0.45, 1turn) scale(0);
+	}
+	to {
+		transform: rotate3d(0, 0, 0, 0) scale(100%);
+	}
+}
+@keyframes disappear {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes workImages {
+	from {
+		transform-origin: 0;
+		transform: scale(0) translate(0, 0);
+	}
+	80% {
+		transform-origin: 0;
+		transform: scale(0) translate(0, 0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes satellite {
+	from {
+		transform: rotate(360deg);
+		opacity: 0;
+		top: -100%;
+		left: -100%;
+	}
+	60% {
+		transform: rotate(-20deg);
+	}
+	70% {
+		transform: rotate(10deg);
+	}
+	80% {
+		transform: rotate(-10deg);
+		top: -35%;
+		left: -15%;
+	}
+	to {
+		opacity: 1;
+		top: -30%;
+		left: -8%;
+	}
+}
+@keyframes satelliteLight {
+	from {
+		opacity: 0;
+		height: 0;
+	}
+	90% {
+		opacity: 0;
+		height: 0;
+	}
+	to {
+		opacity: 1;
+		height: 100%;
+	}
+}
+@keyframes concertsOne {
+	from {
+		opacity: 0;
+	}
+	90% {
+		transform: scale3d(0, 0, 1, 1turn);
+		opacity: 0;
+	}
+	to {
+		transform: scale3d(0, 0, 0, 0);
+		opacity: 1;
+	}
+}
+@keyframes planetOrbit {
+	0% {
+		z-index: 10;
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		z-index: 0;
+		transform: translate3d(-5rem, 0, -5rem);
+	}
+	50% {
+		z-index: 0;
+		transform: translate3d(0, 0, 0);
+	}
+	75% {
+		z-index: 0;
+		transform: translate3d(10rem, 0, 5rem);
+	}
+	100% {
+		z-index: 10;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes conertTwo {
+	from {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(120%);
+	}
+	80% {
+		transform: scale(90%);
+	}
+	90% {
+		transform: scale(110%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes stains {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}

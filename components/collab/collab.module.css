@@ -1,0 +1,13 @@
+.formContainer {
+	width: 30vw;
+	height: 20vw;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.backdrop {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+}

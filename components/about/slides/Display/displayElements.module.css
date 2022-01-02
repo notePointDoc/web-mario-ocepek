@@ -1,0 +1,421 @@
+/* FIRST SLIDE */
+.about-elements {
+	animation: element-appear 500ms;
+}
+.about-circle {
+	width: 85%;
+	height: 85%;
+	background-color: rgba(254, 65, 65, 0.7);
+	border-radius: 100%;
+	bottom: 0;
+	right: 0;
+	margin: 1rem;
+	z-index: 2;
+}
+.about-circleSmall {
+	width: 25%;
+	height: 25%;
+	border-radius: 100%;
+	bottom: -2%;
+	left: -10%;
+	background-color: rgba(255, 119, 119, 0.5);
+	z-index: 1;
+}
+.about-circleSuperSmall {
+	width: 7%;
+	height: 7%;
+	border-radius: 100%;
+	left: 15%;
+	background-color: rgba(255, 119, 119, 0.5);
+	z-index: 1;
+}
+.about-oval {
+	width: 11.6rem;
+	height: 41.8rem;
+	border-radius: 50%/10rem;
+	bottom: -20%;
+	right: 40%;
+	background: linear-gradient(
+		180.43deg,
+		#e5ece9 0.37%,
+		rgba(229, 236, 233, 0) 129.92%
+	);
+	transform: rotate(135deg);
+	z-index: 0;
+}
+/* SECOND SLIDE */
+.work-vectors {
+	z-index: 5;
+}
+.work-diamond {
+	background-color: rgba(74, 135, 255, 0.54);
+	width: 36%;
+	height: 36%;
+	top: 6%;
+	left: -5%;
+	transform: rotate(45deg);
+}
+.work-rectangle {
+	width: 63%;
+	height: 43.2%;
+	right: -7%;
+	top: -7%;
+
+	background: rgba(74, 255, 114, 0.5);
+}
+.work-circleBig {
+	width: 37%;
+	height: 37%;
+	border-radius: 100%;
+	background-color: rgba(255, 119, 119, 0.5);
+	bottom: 12%;
+	right: 20%;
+}
+.work-trapezoid {
+	width: 80%;
+	height: 17.32%;
+	background-color: rgba(218, 218, 218, 1);
+	bottom: 20%;
+	right: -30%;
+	transform: skew(-60deg);
+}
+.work-circleSmall {
+	width: 7.2%;
+	height: 7.2%;
+	background-color: rgba(255, 119, 119, 0.5);
+	border-radius: 100%;
+	top: -42%;
+	left: 30%;
+}
+/* THIRD SLIDE */
+/* ANIMATIONS */
+.about-elements:not(.about-oval, .about-circle) {
+	animation-name: elementAppear;
+	animation-duration: 500ms;
+
+	animation-iteration-count: 1;
+}
+.about-oval {
+	animation-name: oval-animation;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+}
+.about-circle {
+	animation-name: fadeIn;
+	animation-duration: 2000ms;
+}
+.work-diamond {
+	animation-name: rotateDiamond;
+	animation-duration: 1500ms;
+	animation-timing-function: ease-in-out;
+}
+.work-triangle {
+	animation-name: rotateTriangle;
+	animation-duration: 2000ms;
+}
+.work-rectangle {
+	animation-name: rotate;
+	animation-duration: 2000ms;
+	animation-timing-function: ease-in-out;
+}
+.work-trapezoid {
+	animation-name: disappear;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+}
+.work-circleBig,
+.work-circleSmall {
+	animation-name: rotate;
+	animation-duration: 2000ms;
+	animation-timing-function: ease-in-out;
+}
+/* KEYFRAMES */
+/* KEYFRAMES */
+@keyframes elementAppear {
+	from {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(130%);
+	}
+	90% {
+		transform: scale(90%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes oval-animation {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes appear {
+	from {
+		transform: scale3d(120%, 0, 120%);
+	}
+	50% {
+		transform: scale3d(120%, 0, 120%);
+	}
+	to {
+		transform: scale3d(100%, 100%, 100%);
+	}
+}
+@keyframes fadeIn {
+	from {
+		transform: scale(0) translateX(-400px);
+	}
+	to {
+		transform: scale(100%) translateX(0);
+	}
+}
+@keyframes dash {
+	from {
+		opacity: 0;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
+	70% {
+		opacity: 0;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
+	to {
+		opacity: 1;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(780deg) scale(0);
+	}
+	50% {
+		transform: rotate(780deg) scale(0);
+	}
+	80% {
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform: rotate(0) scale(90%);
+	}
+	to {
+		trasform: rotate(0) scale(100%);
+	}
+}
+@keyframes rotateDiamond {
+	from {
+		transform: rotate(0) scale(0);
+	}
+	50% {
+		transform: rotate(360deg) scale(0);
+	}
+	80% {
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform: rotate(60deg) scale(80%);
+	}
+	to {
+		trasform: rotate(60deg) scale(100%);
+	}
+}
+@keyframes bounce {
+	0% {
+		bottom: 100%;
+		right: 100%;
+	}
+	10% {
+		bottom: 16%;
+		right: 30%;
+	}
+	20% {
+		bottom: 50%;
+		right: -35%;
+	}
+	30% {
+		bottom: 90%;
+		right: -30%;
+	}
+	40% {
+		bottom: 100%;
+		right: -25%;
+	}
+	50% {
+		bottom: 90%;
+		right: -20%;
+	}
+	75% {
+		bottom: 16%;
+		right: -35%;
+	}
+	90% {
+		bottom: 20%;
+		right: -35%;
+	}
+	100% {
+		bottom: 16%;
+		right: -35%;
+	}
+}
+@keyframes rotateTriangle {
+	from {
+		transform-origin: right;
+		transform: rotate(0) scale(0);
+	}
+	50% {
+		transform-origin: right;
+		transform: rotate(780deg) scale(0);
+	}
+	80% {
+		transform-origin: right;
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform-origin: right;
+		transform: rotate(0) scale(90%);
+	}
+	to {
+		transform-origin: right;
+		transform: rotate(0) scale(100%);
+	}
+}
+@keyframes cubeAnimation {
+	from {
+		transform: rotate3d(-0.45, 0.45, -0.45, 1turn) scale(0);
+	}
+	50% {
+		transform: rotate3d(-0.45, 0.45, -0.45, 1turn) scale(0);
+	}
+	to {
+		transform: rotate3d(0, 0, 0, 0) scale(100%);
+	}
+}
+@keyframes disappear {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes workImages {
+	from {
+		transform-origin: 0;
+		transform: scale(0) translate(0, 0);
+	}
+	80% {
+		transform-origin: 0;
+		transform: scale(0) translate(0, 0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes satellite {
+	from {
+		transform: rotate(360deg);
+		opacity: 0;
+		top: -100%;
+		left: -100%;
+	}
+	60% {
+		transform: rotate(-20deg);
+	}
+	70% {
+		transform: rotate(10deg);
+	}
+	80% {
+		transform: rotate(-10deg);
+		top: -35%;
+		left: -15%;
+	}
+	to {
+		opacity: 1;
+		top: -30%;
+		left: -8%;
+	}
+}
+@keyframes satelliteLight {
+	from {
+		opacity: 0;
+		height: 0;
+	}
+	90% {
+		opacity: 0;
+		height: 0;
+	}
+	to {
+		opacity: 1;
+		height: 100%;
+	}
+}
+@keyframes concertsOne {
+	from {
+		opacity: 0;
+	}
+	90% {
+		transform: scale3d(0, 0, 1, 1turn);
+		opacity: 0;
+	}
+	to {
+		transform: scale3d(0, 0, 0, 0);
+		opacity: 1;
+	}
+}
+@keyframes planetOrbit {
+	0% {
+		z-index: 10;
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		z-index: 0;
+		transform: translate3d(-5rem, 0, -5rem);
+	}
+	50% {
+		z-index: 0;
+		transform: translate3d(0, 0, 0);
+	}
+	75% {
+		z-index: 0;
+		transform: translate3d(10rem, 0, 5rem);
+	}
+	100% {
+		z-index: 10;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes conertTwo {
+	from {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(120%);
+	}
+	80% {
+		transform: scale(90%);
+	}
+	90% {
+		transform: scale(110%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes stains {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}

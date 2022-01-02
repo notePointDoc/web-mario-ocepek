@@ -1,0 +1,4 @@
+.mainMenu {
+	display: flex;
+	flex-flow: row nowrap;
+}

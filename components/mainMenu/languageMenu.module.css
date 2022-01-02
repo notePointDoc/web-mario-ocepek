@@ -1,0 +1,5 @@
+.languageMenu > svg,
+.languageMenu > button {
+	width: 3rem;
+	height: auto;
+}

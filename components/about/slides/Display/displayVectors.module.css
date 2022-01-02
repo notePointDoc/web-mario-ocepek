@@ -1,0 +1,529 @@
+/* ABOUT VECTORS */
+.about-lineOne {
+	animation-name: dash;
+
+	animation-iteration-count: 1;
+	animation-duration: 3000ms;
+}
+.about-lineTwo,
+.work-lineOne {
+	animation-name: dash;
+	animation-duration: 2500ms;
+}
+.about-cross {
+	top: 15%;
+	left: 1%;
+}
+.about-ufo {
+	top: -5%;
+	right: 0;
+}
+.about-line {
+	bottom: 22%;
+	left: -25%;
+}
+.about-lineOne {
+	z-index: 4;
+	top: -15%;
+	right: 3.5%;
+}
+.about-lineTwo {
+	top: 15%;
+	right: 17%;
+	transform: rotate(-177.96deg);
+	z-index: 4;
+}
+.about-donut {
+	top: 40%;
+	left: 5%;
+}
+.about-crossTwo {
+	bottom: 10%;
+	right: -10%;
+}
+/*WORK VECTORS  */
+.work-vectors {
+	z-index: 5;
+}
+.work-triangle {
+	width: 32.07%;
+	height: 74.34%;
+	top: -43%;
+	left: 15%;
+	z-index: -1;
+}
+.work-ball {
+	bottom: 16%;
+	right: -35%;
+	z-index: 10;
+}
+.work-brick {
+	bottom: 20%;
+	left: 50%;
+	z-index: 10;
+}
+.work-parallelLines {
+	top: -35%;
+	left: 22%;
+	z-index: -1;
+}
+.work-cube {
+	bottom: 34%;
+	left: 12%;
+}
+.work-lineOne {
+	top: -32%;
+	left: 27%;
+}
+.work-lineTwo {
+	top: 1%;
+	right: 15.5%;
+}
+.work-lineThree {
+	bottom: 35%;
+	left: -20%;
+}
+.work-wifiOne {
+	top: -5%;
+	left: -25%;
+	transform: rotate(260deg);
+}
+.work-wifiTwo {
+	bottom: 25%;
+	left: 30%;
+	transform: rotate(60deg);
+}
+.work-wifiThree {
+	top: -35%;
+	right: 15%;
+}
+.work-light {
+	right: -32%;
+	top: -8%;
+	z-index: 2;
+}
+.concerts-satellite {
+	top: -30%;
+	left: -8%;
+}
+.concerts-wifiOne {
+	top: -35%;
+	left: 30%;
+}
+.concerts-wifiTwo {
+	top: -3%;
+	left: -18%;
+}
+.concerts-satelliteStrike {
+	top: -6%;
+	left: 15%;
+}
+/* Images */
+.concerts-concertsOne {
+	top: 3%;
+	left: 20%;
+	z-index: 3;
+}
+.concerts-concertsTwo {
+	top: -35%;
+	right: -10%;
+}
+.concerts-concertsThree {
+	bottom: 20%;
+	left: -15%;
+}
+.concerts-stainOne {
+	bottom: 10%;
+	left: 15%;
+}
+.concerts-stainTwo {
+	z-index: -3;
+	top: -27%;
+	left: -15%;
+}
+.concerts-stainThree {
+	right: 15%;
+	top: 10%;
+}
+.concerts-planet {
+	top: -10%;
+	right: 17%;
+}
+
+/* ANIMATIONS */
+.work-vectors:not(.work-ball, .work-brick, .work-cube, .work-lineOne, .work-lineTwo, .work-lineThree) {
+	animation-name: disappear;
+	animation-duration: 5000ms;
+	animation-timing-function: ease-in-out;
+}
+.work-trapezoid {
+	animation-name: disappear;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+}
+.work-lineTwo {
+	animation-name: dash;
+
+	animation-iteration-count: 1;
+	animation-duration: 4800ms;
+}
+.work-lineOne {
+	animation-name: dash;
+
+	animation-iteration-count: 1;
+	animation-duration: 4500ms;
+}
+.about-vectors:not(.about-lineOne, .about-lineTwo) {
+	animation-name: appear;
+	animation-duration: 2000ms;
+	animation-iteration-count: 1;
+}
+.work-lineThree {
+	animation-name: dash;
+	animation-duration: 5600ms;
+	animation-iteration-count: 1;
+}
+.work-ball {
+	animation-name: bounce;
+	animation-duration: 1000ms;
+	animation-timing-function: linear;
+}
+.work-cube,
+.work-brick {
+	animation-name: cubeAnimation;
+	animation-duration: 2500ms;
+	animation-timing-function: ease-in-out;
+}
+.concerts-satellite {
+	animation-name: satellite;
+	animation-duration: 2000ms;
+	animation-timing-function: ease-out;
+}
+.concerts-satelliteStrike {
+	animation-name: satelliteLight;
+	animation-duration: 2500ms;
+	animation-timing-function: ease-out;
+}
+.concerts-concertsOne {
+	animation-name: concertsOne;
+	animation-duration: 2500ms;
+	animation-timing-function: ease-out;
+}
+.concerts-concertsTwo {
+	animation-name: conertTwo;
+	animation-duration: 1000ms;
+	animation-timing-function: ease-out;
+}
+.concerts-concertsThree {
+	animation-name: conertTwo;
+	animation-duration: 500ms;
+	animation-timing-function: ease-out;
+}
+.concerts-planet {
+	animation-name: planetOrbit;
+	animation-duration: 5000ms;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+.concerts-stainOne,
+.concerts-stainTwo,
+.concerts-stainThree {
+	animation-name: stains;
+	animation-duration: 2000ms;
+	animation-timing-function: ease-in-out;
+}
+.concerts-wifiOne,
+.concerts-wifiTwo {
+	animation-name: stains;
+	animation-duration: 3000ms;
+	animation-timing-function: ease-in-out;
+}
+/* KEYFRAMES */
+@keyframes elementAppear {
+	from {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(130%);
+	}
+	90% {
+		transform: scale(90%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes oval-animation {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.5;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes appear {
+	from {
+		transform: scale3d(120%, 0, 120%);
+	}
+	50% {
+		transform: scale3d(120%, 0, 120%);
+	}
+	to {
+		transform: scale3d(100%, 100%, 100%);
+	}
+}
+@keyframes fadeIn {
+	from {
+		transform: scale(0) translateX(-400px);
+	}
+	to {
+		transform: scale(100%) translateX(0);
+	}
+}
+@keyframes dash {
+	from {
+		opacity: 0;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
+	70% {
+		opacity: 0;
+		stroke-dasharray: 1000;
+		stroke-dashoffset: 1000;
+	}
+	to {
+		opacity: 1;
+		stroke-dashoffset: 0;
+	}
+}
+@keyframes rotate {
+	from {
+		transform: rotate(780deg) scale(0);
+	}
+	50% {
+		transform: rotate(780deg) scale(0);
+	}
+	80% {
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform: rotate(0) scale(90%);
+	}
+	to {
+		trasform: rotate(0) scale(100%);
+	}
+}
+@keyframes rotateDiamond {
+	from {
+		transform: rotate(0) scale(0);
+	}
+	50% {
+		transform: rotate(360deg) scale(0);
+	}
+	80% {
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform: rotate(60deg) scale(80%);
+	}
+	to {
+		trasform: rotate(60deg) scale(100%);
+	}
+}
+@keyframes bounce {
+	0% {
+		bottom: 100%;
+		right: 100%;
+	}
+	10% {
+		bottom: 16%;
+		right: 30%;
+	}
+	20% {
+		bottom: 50%;
+		right: -35%;
+	}
+	30% {
+		bottom: 90%;
+		right: -30%;
+	}
+	40% {
+		bottom: 100%;
+		right: -25%;
+	}
+	50% {
+		bottom: 90%;
+		right: -20%;
+	}
+	75% {
+		bottom: 16%;
+		right: -35%;
+	}
+	90% {
+		bottom: 20%;
+		right: -35%;
+	}
+	100% {
+		bottom: 16%;
+		right: -35%;
+	}
+}
+@keyframes rotateTriangle {
+	from {
+		transform-origin: right;
+		transform: rotate(0) scale(0);
+	}
+	50% {
+		transform-origin: right;
+		transform: rotate(780deg) scale(0);
+	}
+	80% {
+		transform-origin: right;
+		transform: rotate(60deg) scale(120%);
+	}
+	90% {
+		transform-origin: right;
+		transform: rotate(0) scale(90%);
+	}
+	to {
+		transform-origin: right;
+		transform: rotate(0) scale(100%);
+	}
+}
+@keyframes cubeAnimation {
+	from {
+		transform: rotate3d(-0.45, 0.45, -0.45, 1turn) scale(0);
+	}
+	50% {
+		transform: rotate3d(-0.45, 0.45, -0.45, 1turn) scale(0);
+	}
+	to {
+		transform: rotate3d(0, 0, 0, 0) scale(100%);
+	}
+}
+@keyframes disappear {
+	from {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+@keyframes workImages {
+	from {
+		transform-origin: 0;
+		transform: scale(0) translate(0, 0);
+	}
+	80% {
+		transform-origin: 0;
+		transform: scale(0) translate(0, 0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes satellite {
+	from {
+		transform: rotate(360deg);
+		opacity: 0;
+		top: -100%;
+		left: -100%;
+	}
+	60% {
+		transform: rotate(-20deg);
+	}
+	70% {
+		transform: rotate(10deg);
+	}
+	80% {
+		transform: rotate(-10deg);
+		top: -35%;
+		left: -15%;
+	}
+	to {
+		opacity: 1;
+		top: -30%;
+		left: -8%;
+	}
+}
+@keyframes satelliteLight {
+	from {
+		opacity: 0;
+		height: 0;
+	}
+	90% {
+		opacity: 0;
+		height: 0;
+	}
+	to {
+		opacity: 1;
+		height: 100%;
+	}
+}
+@keyframes concertsOne {
+	from {
+		opacity: 0;
+	}
+	90% {
+		transform: scale3d(0, 0, 1, 1turn);
+		opacity: 0;
+	}
+	to {
+		transform: scale3d(0, 0, 0, 0);
+		opacity: 1;
+	}
+}
+@keyframes planetOrbit {
+	0% {
+		z-index: 10;
+		transform: translate3d(0, 0, 0);
+	}
+	25% {
+		z-index: 0;
+		transform: translate3d(-5rem, 0, -5rem);
+	}
+	50% {
+		z-index: 0;
+		transform: translate3d(0, 0, 0);
+	}
+	75% {
+		z-index: 0;
+		transform: translate3d(10rem, 0, 5rem);
+	}
+	100% {
+		z-index: 10;
+		transform: translate3d(0, 0, 0);
+	}
+}
+@keyframes conertTwo {
+	from {
+		transform: scale(0);
+	}
+	70% {
+		transform: scale(120%);
+	}
+	80% {
+		transform: scale(90%);
+	}
+	90% {
+		transform: scale(110%);
+	}
+	to {
+		transform: scale(100%);
+	}
+}
+@keyframes stains {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(100%);
+	}
+}

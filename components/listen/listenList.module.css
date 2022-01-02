@@ -1,0 +1,38 @@
+.active {
+	transition: all ease-in-out 500ms;
+	transform: scale(120%);
+	position: relative;
+}
+.active::before {
+	content: " ";
+	display: inline;
+	position: absolute;
+	bottom: 3rem;
+	right: -7rem;
+
+	border-radius: 100rem;
+	width: 15rem;
+	height: 15rem;
+	background-image: url("../../assets/listen/vinyl-1418829-removebg-preview.png");
+	background-size: cover;
+	z-index: -2;
+	animation: rotate 1s linear infinite, toPlace 500ms linear 1;
+	overflow: hidden;
+}
+
+@keyframes rotate {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+@keyframes toPlace {
+	from {
+		transform: translateX(-7rem);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
