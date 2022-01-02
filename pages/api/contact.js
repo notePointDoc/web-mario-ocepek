@@ -23,7 +23,7 @@ export default function (req, res) {
 		</div>`,
 	}
 	transporter.sendMail(mailData, function (err, info) {
-		if (err) console.log(err)
+		if (err) console.log(err, "No se envían los putos correos")
 		else console.log(info)
 	})
 	res.status(200)
