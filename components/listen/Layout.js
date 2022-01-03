@@ -1,4 +1,4 @@
-import React, { useRef, useMemo } from "react"
+import React, { useRef, useMemo, useEffect } from "react"
 import * as THREE from "three/src/Three"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { a } from "@react-spring/three"
@@ -40,25 +40,18 @@ function Stars({ position }) {
 function Scene() {
 	return (
 		<>
-			<a.spotLight intensity={1.2} color='white' position={[300, 300, 4000]} />
-			<Stars position={[1, 1, 1]} />
+			<a.spotLight intensity={1.2} color='black' position={[300, 400, 500]} />
+			<Stars position={[100, 200, -500]} />
 		</>
 	)
 }
-export default function Main() {
+export default function Layout() {
 	// This tiny spring right here controlls all(!) the animations, one for scroll, the other for mouse movement ...
-
 	return (
-		<>
-			<Canvas
-				style={{
-					position: "absolute",
-					width: "100%",
-					height: "100%",
-				}}
-			>
-				<Scene />
-			</Canvas>
-		</>
+		<Canvas
+			style={{ position: "absolute", width: "100%", height: "100%", zIndex: "-5" }}
+		>
+			<Scene />
+		</Canvas>
 	)
 }

@@ -2,12 +2,12 @@ import React from "react"
 import ListenList from "./ListenList"
 import styles from "./listen.module.css"
 
-const Listen = (props) => {
+const Listen = ({ trackData, children }) => {
 	// COMPONENT RETURN
-	console.log(props.trackData)
 	return (
 		<div className={styles.listen}>
-			<ListenList trackData={props.trackData}></ListenList>
+			<ListenList trackData={trackData}></ListenList>
+			{children}
 		</div>
 	)
 }

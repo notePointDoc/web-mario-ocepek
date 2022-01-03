@@ -6,4 +6,5 @@
 	gap: 5rem;
 	overflow: hidden;
 	z-index: 10;
+	position: relative;
 }

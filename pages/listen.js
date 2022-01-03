@@ -5,8 +5,20 @@ import Layout from "../components/listen/Layout"
 const listen = (props) => {
 	return (
 		<>
-			<Layout></Layout>
-			<Listen trackData={props.trackData}></Listen>
+			<Listen trackData={props.trackData}>
+				<Layout></Layout>
+				<style jsx global>
+					{`
+						body {
+							background: linear-gradient(white, black, black);
+						}
+
+						svg {
+							color: white;
+						}
+					`}
+				</style>
+			</Listen>
 		</>
 	)
 }
