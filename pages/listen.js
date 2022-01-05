@@ -1,13 +1,11 @@
 import React from "react"
 import Listen from "../components/listen/Listen"
-import Layout from "../components/listen/Layout"
+import StarLayout from "../components/listen/StarLayout"
 // PAGE
 const listen = ({ trackData }) => {
 	return (
 		<>
-			<Listen trackData={trackData}>
-				<Layout></Layout>
-			</Listen>
+			<Listen trackData={trackData}></Listen>
 		</>
 	)
 }

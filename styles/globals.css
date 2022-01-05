@@ -27,3 +27,6 @@ a {
 	color: black;
 	z-index: 1;
 }
+#__next {
+	position: relative;
+}

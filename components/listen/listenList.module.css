@@ -13,7 +13,7 @@
 	border-radius: 100rem;
 	width: 15rem;
 	height: 15rem;
-	background-image: url("../../assets/listen/vinyl-1418829-removebg-preview.png");
+	background-image: url("../../assets/listen/vinyl.svg");
 	background-size: cover;
 	z-index: -2;
 	animation: rotate 1s linear infinite, toPlace 500ms linear 1;

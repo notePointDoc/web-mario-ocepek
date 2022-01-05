@@ -1,4 +1,4 @@
-import React, { useRef, useMemo, useEffect } from "react"
+import React, { useRef, useMemo } from "react"
 import * as THREE from "three/src/Three"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { a } from "@react-spring/three"
@@ -45,11 +45,15 @@ function Scene() {
 		</>
 	)
 }
-export default function Layout() {
+export default function StarLayout() {
 	// This tiny spring right here controlls all(!) the animations, one for scroll, the other for mouse movement ...
 	return (
 		<Canvas
-			style={{ position: "absolute", width: "100%", height: "100%", zIndex: "-5" }}
+			style={{
+				width: "100%",
+				height: "100%",
+				position: "absolute",
+			}}
 		>
 			<Scene />
 		</Canvas>

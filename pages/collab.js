@@ -109,28 +109,27 @@ const collab = () => {
 	// STYLES OF THE MODAL
 	const overlay = {
 		background: "radial-gradient(#000000, #00000098)",
-		zIndex: "10",
+		zIndex: "2",
 	}
 	const content = {
 		position: "relative",
 		margin: "0 auto",
-		width: "59.5rem",
-		height: "46.7rem",
+		width: "fit-content",
+		height: "fit-content",
 		background: "none",
 		border: "none",
-		overflow: "hidden",
+		overflow: "visible",
 	}
-	Modal.setAppElement("#modal_route")
+	Modal.setAppElement("#__next")
 	return (
 		<Modal
 			isOpen={true}
-			shouldCloseOnOverlayClick={true}
+			shouldCloseOnEsc={true}
 			shouldCloseOnEsc={true}
 			onRequestClose={() => {
 				router.push("/")
 			}}
 			style={{ overlay: overlay, content: content }}
-			preventScroll={true}
 		>
 			<Collab
 				onSubmitHandler={onSubmitHandler}
