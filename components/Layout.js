@@ -47,12 +47,6 @@ const Layout = ({ children, path }) => {
 						color: white;
 						z-index: 1;
 					}
-					svg {
-						stroke: white;
-					}
-					svg > path {
-						fill: white;
-					}
 				`}</style>
 			)
 		}

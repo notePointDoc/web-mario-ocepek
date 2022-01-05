@@ -11,6 +11,7 @@ const ButtonList = (props) => {
 			// Pushing buttons into the array
 			arr.push(
 				<Button
+					className='mainMenu'
 					reference={element}
 					value={element}
 					key={element + Math.floor(Math.random()).toString}
