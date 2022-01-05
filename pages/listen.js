@@ -2,22 +2,11 @@ import React from "react"
 import Listen from "../components/listen/Listen"
 import Layout from "../components/listen/Layout"
 // PAGE
-const listen = (props) => {
+const listen = ({ trackData }) => {
 	return (
 		<>
-			<Listen trackData={props.trackData}>
+			<Listen trackData={trackData}>
 				<Layout></Layout>
-				<style jsx global>
-					{`
-						body {
-							background: linear-gradient(white, black, black);
-						}
-
-						svg {
-							color: white;
-						}
-					`}
-				</style>
 			</Listen>
 		</>
 	)

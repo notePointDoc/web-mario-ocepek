@@ -1,4 +1,5 @@
-import React, { useReducer } from "react"
+import React, { useReducer, useState } from "react"
+import { useRouter } from "next/router"
 import Menu from "../components/mainMenu/Menu"
 import { Language, languageList } from "../context/Language"
 
@@ -33,6 +34,7 @@ const reduce = (globalState, action) => {
 
 const Layout = ({ children }) => {
 	const [globalState, dispatchGlobal] = useReducer(reduce, initialState)
+	const myRouter = useRouter()
 	return (
 		<Language.Provider value={languageList[globalState.language]}>
 			<Menu dispatchGlobal={dispatchGlobal}></Menu>

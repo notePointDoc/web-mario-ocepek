@@ -3,12 +3,12 @@ import LanguageMenu from "./LanguageMenu"
 import MainMenu from "./MainMenu"
 import styles from "./menu.module.css"
 
-const Menu = (props) => {
+const Menu = ({ dispatchGlobal }) => {
 	// Constants
 	return (
 		<nav className={styles.menu}>
-			<MainMenu dispatchGlobal={props.dispatchGlobal}></MainMenu>
-			<LanguageMenu dispatchGlobal={props.dispatchGlobal}></LanguageMenu>
+			<MainMenu dispatchGlobal={dispatchGlobal}></MainMenu>
+			<LanguageMenu dispatchGlobal={dispatchGlobal}></LanguageMenu>
 		</nav>
 	)
 }

@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import Collab from "../components/collab/Collab"
+import { useRouter } from "next/router"
+import Modal from "react-modal"
 const initInfo = {
 	name: "",
 	email: "",
@@ -16,6 +18,7 @@ const collab = () => {
 	// Contains the input enetered by user
 	const [info, setInfo] = useState(initInfo)
 	const [isValid, setIsValid] = useState(initIsValid)
+	const router = useRouter()
 	// Object that contains text to be displayed depending on language selected
 
 	//Checks if the input has a valid format and changes state acordingly
@@ -101,13 +104,39 @@ const collab = () => {
 			console.log("The form is not right!!!")
 		}
 	}
-	// Sends a mail with the data subbmitted in the form
-
+	//
+	//
+	// STYLES OF THE MODAL
+	const overlay = {
+		background: "radial-gradient(#000000, #00000098)",
+		zIndex: "10",
+	}
+	const content = {
+		position: "relative",
+		margin: "0 auto",
+		width: "59.5rem",
+		height: "46.7rem",
+		background: "none",
+		border: "none",
+		overflow: "hidden",
+	}
+	Modal.setAppElement("#modal_route")
 	return (
-		<Collab
-			onSubmitHandler={onSubmitHandler}
-			onChangeHandler={onChangeHandler}
-		></Collab>
+		<Modal
+			isOpen={true}
+			shouldCloseOnOverlayClick={true}
+			shouldCloseOnEsc={true}
+			onRequestClose={() => {
+				router.push("/")
+			}}
+			style={{ overlay: overlay, content: content }}
+			preventScroll={true}
+		>
+			<Collab
+				onSubmitHandler={onSubmitHandler}
+				onChangeHandler={onChangeHandler}
+			></Collab>
+		</Modal>
 	)
 }
 

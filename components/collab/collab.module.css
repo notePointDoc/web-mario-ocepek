@@ -1,13 +1,18 @@
-.formContainer {
-	width: 30vw;
-	height: 20vw;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+.collabContainer {
+	background-image: url(../../assets/about/papel.jpg);
+	padding: 2rem 3rem;
+	border-radius: 30px;
+	position: relative;
+	top: 0;
+	width: 35rem;
+	height: fit-content;
+	display: flex;
+	flex-flow: column;
 }
-.backdrop {
-	width: 100vw;
-	height: 100vh;
+.image {
 	position: absolute;
+	width: 22.3rem;
+	height: 24.8rem;
+	top: -5%;
+	right: -50%;
 }

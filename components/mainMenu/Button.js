@@ -8,6 +8,8 @@ const Button = (props) => {
 	if (props.reference === "about") {
 		link = "/"
 	}
+	if (props.reference === "collab") {
+	}
 	return (
 		<li className={styles.listElement}>
 			<Link href={link} className={styles.link}>
