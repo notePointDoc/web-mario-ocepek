@@ -14,12 +14,12 @@ function Stars({ position }) {
 		group.current.scale.set(s, s, s)
 	})
 	const [geo, mat, coords] = useMemo(() => {
-		const geo = new THREE.SphereBufferGeometry(1, 10, 10)
+		const geo = new THREE.SphereBufferGeometry(0.5, 0.5, 0.5)
 		const mat = new THREE.MeshBasicMaterial({
 			color: new THREE.Color("peachpuff"),
 			transparent: true,
 		})
-		const coords = new Array(1000)
+		const coords = new Array(5000)
 			.fill()
 			.map((i) => [
 				Math.random() * 800 - 400,
