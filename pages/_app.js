@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
 	// MODAL STYLES
 	const overlay = {
 		background: "radial-gradient(#000000, #00000098)",
-		zIndex: "2",
+		zIndex: "10",
 	}
 	const content = {
 		position: "relative",
@@ -32,24 +32,25 @@ function MyApp({ Component, pageProps }) {
 		background: "none",
 		border: "none",
 		overflow: "visible",
+		zIndex: "9",
 	}
 	return (
 		<>
 			<Layout path={router.pathname}>
-				<Component {...pageProps} />
 				<Modal
 					isOpen={isModalOpen}
 					shouldCloseOnEsc={true}
 					preventScroll={true}
 					shouldCloseOnEsc={true}
 					onRequestClose={() => {
-						router.back()
+						router.push("/")
 						setIsModalOpen(false)
 					}}
 					style={{ overlay: overlay, content: content }}
 				>
 					<Collab></Collab>
 				</Modal>
+				<Component {...pageProps} />
 			</Layout>
 		</>
 	)
