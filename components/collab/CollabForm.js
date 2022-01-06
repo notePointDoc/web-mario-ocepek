@@ -2,10 +2,8 @@ import React, { useContext } from "react"
 import { Language } from "../../context/Language"
 import styles from "./collabForm.module.css"
 //
-const CollabForm = (props) => {
+const CollabForm = ({ onChangeHandler, onSubmitHandler }) => {
 	const { collab } = useContext(Language)
-	const onChangeHandler = props.onChangeHandler
-	const onSubmitHandler = props.onSubmitHandler
 	// NAME: name, email, message, cookies
 	return (
 		<>

@@ -3,17 +3,21 @@ import { menuVectors } from "../../assets/vectors/mainMenu"
 import styles from "./button.module.css"
 import Link from "next/link"
 
-const Button = (props) => {
-	let link = `/${props.reference}`
-	if (props.reference === "about") {
+const Button = ({ reference, item }) => {
+	let link = `/${reference}`
+	let asLink = `/${reference}`
+	if (reference === "about") {
 		link = "/"
+		asLink = "/"
 	}
-	if (props.reference === "collab") {
+	if (reference === "collab") {
+		link = ""
+		asLink = "/collab"
 	}
 	return (
 		<li className={styles.listElement}>
-			<Link href={link} className={styles.link}>
-				{props.item}
+			<Link href={link} as={asLink} className={styles.link}>
+				{item}
 			</Link>
 			{menuVectors}
 		</li>

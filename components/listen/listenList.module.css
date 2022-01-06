@@ -9,7 +9,7 @@
 	position: absolute;
 	bottom: 2rem;
 	right: -8rem;
-	box-shadow: 10px 10px 100px #666666;
+	box-shadow: 5px 5px 30px #666666;
 	border-radius: 100%;
 	width: 17rem;
 	height: 17rem;
@@ -17,7 +17,7 @@
 	background-size: cover;
 	z-index: -2;
 	animation: rotate 1s linear infinite, toPlace 500ms linear 1;
-	overflow: visible;
+	overflow: hidden;
 }
 
 @keyframes rotate {

@@ -12,7 +12,7 @@ const DisplayImages = (props) => {
 					styles[currentState + "-img"]
 				} ${styles.allImg}`}
 			>
-				<Image src={e.src} alt={e.name} layout='intrinsic'></Image>
+				<Image src={e.src} alt={e.name} layout='intrinsic' priority={true}></Image>
 			</div>
 		)
 	})
