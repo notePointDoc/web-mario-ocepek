@@ -33,6 +33,7 @@ function MyApp({ Component, pageProps }) {
 		border: "none",
 		overflow: "visible",
 		zIndex: "9",
+		maxHeight: "100vh",
 	}
 	return (
 		<>
@@ -40,8 +41,8 @@ function MyApp({ Component, pageProps }) {
 				<Modal
 					isOpen={isModalOpen}
 					shouldCloseOnEsc={true}
-					preventScroll={true}
 					shouldCloseOnEsc={true}
+					shouldFocusAfterRender={true}
 					onRequestClose={() => {
 						router.back()
 						setIsModalOpen(false)

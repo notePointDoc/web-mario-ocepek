@@ -19,7 +19,7 @@ function Stars({ position }) {
 			color: new THREE.Color("peachpuff"),
 			transparent: true,
 		})
-		const coords = new Array(5000)
+		const coords = new Array(1500)
 			.fill()
 			.map((i) => [
 				Math.random() * 800 - 400,
