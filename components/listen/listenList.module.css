@@ -7,17 +7,17 @@
 	content: " ";
 	display: inline;
 	position: absolute;
-	bottom: 3rem;
-	right: -7rem;
-
-	border-radius: 100rem;
-	width: 15rem;
-	height: 15rem;
+	bottom: 2rem;
+	right: -8rem;
+	box-shadow: 10px 10px 100px #666666;
+	border-radius: 100%;
+	width: 17rem;
+	height: 17rem;
 	background-image: url("../../assets/listen/vinyl.svg");
 	background-size: cover;
 	z-index: -2;
 	animation: rotate 1s linear infinite, toPlace 500ms linear 1;
-	overflow: hidden;
+	overflow: visible;
 }
 
 @keyframes rotate {
