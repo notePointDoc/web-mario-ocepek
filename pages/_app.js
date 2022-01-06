@@ -43,7 +43,7 @@ function MyApp({ Component, pageProps }) {
 					preventScroll={true}
 					shouldCloseOnEsc={true}
 					onRequestClose={() => {
-						router.push("/")
+						router.back()
 						setIsModalOpen(false)
 					}}
 					style={{ overlay: overlay, content: content }}
