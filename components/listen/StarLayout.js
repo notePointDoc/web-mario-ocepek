@@ -14,12 +14,13 @@ function Stars({ position }) {
 		group.current.scale.set(s, s, s)
 	})
 	const [geo, mat, coords] = useMemo(() => {
-		const geo = new THREE.SphereBufferGeometry(0.5, 0.5, 0.5)
+		const geo = new THREE.SphereBufferGeometry(0.7, 0.7, 0.7)
 		const mat = new THREE.MeshBasicMaterial({
 			color: new THREE.Color("peachpuff"),
 			transparent: true,
 		})
-		const coords = new Array(1500)
+		const elements = window.innerWidth * 2
+		const coords = new Array(elements)
 			.fill()
 			.map((i) => [
 				Math.random() * 800 - 400,
@@ -46,7 +47,6 @@ function Scene() {
 	)
 }
 export default function StarLayout() {
-	// This tiny spring right here controlls all(!) the animations, one for scroll, the other for mouse movement ...
 	return (
 		<Canvas
 			style={{
@@ -54,6 +54,7 @@ export default function StarLayout() {
 				height: "100%",
 				position: "absolute",
 			}}
+			gl={{ powerPreference: "low-power", failIfMajorPerformanceCaveat: true }}
 		>
 			<Scene />
 		</Canvas>

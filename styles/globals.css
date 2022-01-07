@@ -3,6 +3,8 @@ html {
 }
 body {
 	background-image: url("../assets/about/papel.jpg");
+	min-width: 100vw;
+	position: relative;
 }
 *,
 *::after,
@@ -22,7 +24,4 @@ a {
 	text-decoration: none;
 	color: black;
 	z-index: 1;
-}
-#__next {
-	position: relative;
 }

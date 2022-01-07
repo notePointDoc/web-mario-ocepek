@@ -5,6 +5,7 @@
 }
 .inactive {
 	transition: all 100ms ease-in-out;
+	-webkit-transition: all 100ms ease-in-out;
 }
 .track > p {
 	font-family: fantasy;

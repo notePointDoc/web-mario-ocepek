@@ -1,5 +1,6 @@
 .active {
 	transition: all ease-in-out 500ms;
+	-webkit-transition: all ease-in-out 500ms;
 	transform: scale(120%);
 	position: relative;
 }
@@ -16,14 +17,11 @@
 	background-image: url("../../assets/listen/vinyl.svg");
 	background-size: cover;
 	z-index: -2;
-	animation: rotate 1s linear infinite, toPlace 500ms linear 1;
+	animation: rotate 2s 300ms linear infinite, toPlace 300ms linear 1;
 	overflow: hidden;
 }
 
 @keyframes rotate {
-	from {
-		transform: rotate(0);
-	}
 	to {
 		transform: rotate(360deg);
 	}
