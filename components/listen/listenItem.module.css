@@ -2,6 +2,11 @@
 	width: fit-content;
 	height: fit-content;
 	place-self: center;
+	position: relative;
+}
+.track img {
+	width: 100%;
+	height: 100%;
 }
 .inactive {
 	transition: all 100ms ease-in-out;

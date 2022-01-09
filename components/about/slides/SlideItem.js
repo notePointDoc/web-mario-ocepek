@@ -4,28 +4,27 @@ import styles from "./slideItem.module.css"
 import DisplayVectors from "./Display/DisplayVectors"
 import DisplayImages from "./Display/DisplayImages"
 import DisplayElements from "./Display/DisplayElements"
-const SlideItems = (props) => {
+const SlideItems = ({ state, children, img, vectors, elements }) => {
 	// Constants
-	const currentState = props.state
 	return (
-		<div className={`${styles.reference}`}>
-			{props.children}
+		<div className={`${styles.reference}`} name={state}>
+			{children}
 			<DisplayImages
 				styles={styles}
-				vectors={props.vectors}
-				currentState={currentState}
-				img={props.img}
+				vectors={vectors}
+				currentState={state}
+				img={img}
 			></DisplayImages>
 			<DisplayElements
 				styles={styles}
-				vectors={props.vectors}
-				currentState={currentState}
-				elements={props.elements}
+				vectors={vectors}
+				currentState={state}
+				elements={elements}
 			></DisplayElements>
 			<DisplayVectors
 				styles={styles}
-				vectors={props.vectors}
-				currentState={currentState}
+				vectors={vectors}
+				currentState={state}
 			></DisplayVectors>
 		</div>
 	)

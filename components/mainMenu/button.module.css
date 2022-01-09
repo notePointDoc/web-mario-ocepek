@@ -1,29 +1,28 @@
 .listElement {
-	display: flex;
-	width: 8rem;
-	overflow: visible;
 	position: relative;
-	list-style-type: none;
-	padding: 2rem;
+	padding: 1rem 2rem;
 	margin: 1rem;
-	transition: 200ms ease-in-out;
-	-webkit-transition: 200ms ease-in-out;
-}
-.link {
-	position: absolute;
-	text-align: center;
-	font-weight: 300;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 .listElement > svg {
-	position: absolute;
 	width: 100%;
+	height: 100%;
+	height: auto;
+	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	z-index: -2;
 }
-.p {
-	font-style: italic;
+.listElement > a {
+	text-align: center;
+	font-size: small;
+	z-index: 1000;
+}
+@media (max-width: 600px) {
+	.listElement {
+		padding: 4vw;
+	}
+	.listElement > a {
+		font-size: 4vw;
+	}
 }

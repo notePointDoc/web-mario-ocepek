@@ -10,7 +10,7 @@ const DisplayVectors = (props) => {
 			<span
 				className={`${styles[currentState + "-" + property]} ${
 					styles[currentState + "-vectors"]
-				} `}
+				} ${styles.vectors}`}
 				key={property}
 			>
 				{vectors[property]}

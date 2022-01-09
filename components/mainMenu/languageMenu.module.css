@@ -1,5 +1,22 @@
-.languageMenu > svg,
-.languageMenu > button {
+.languageMenu {
+	display: flex;
+	flex-flow: row nowrap;
+}
+.languageMenu > * {
 	width: 3rem;
-	height: auto;
+	height: 3rem;
+}
+@media (max-width: 600px) {
+	.languageMenu {
+		flex-flow: column;
+	}
+	.languageMenu > * {
+		width: 2rem;
+		height: 2rem;
+	}
+}
+@media (max-width: 350px) {
+	.languageMenu {
+		display: none;
+	}
 }

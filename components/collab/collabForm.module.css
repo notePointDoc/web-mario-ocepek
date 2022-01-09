@@ -36,6 +36,7 @@
 	background: none;
 }
 .button {
+	font-family: "Courier New", Courier, monospace;
 	background-color: #9e3434;
 	display: inline-block;
 	width: fit-content;
@@ -67,17 +68,28 @@
 .cookies > label {
 	font-size: small;
 }
-@keyframes button {
-	from {
-		box-shadow: 3px -3px #6e1e1e;
-		transform: translate(0%, 0%, 0%);
+
+@media (max-width: 600px) {
+	.h1 {
+		font-size: 2rem;
+		font-family: Lucida Handwriting;
+		margin-bottom: 2rem;
 	}
-	50% {
-		box-shadow: none;
-		transform: translate(-3px, 3px, 0%);
+	.form > * {
+		margin: 0;
 	}
-	to {
-		box-shadow: 3px -3px #6e1e1e;
-		transform: translate(0%, 0%, 0%);
+	.message > textarea {
+		height: 2rem;
+	}
+	.button {
+		width: 5rem;
+		height: 2rem;
+		padding: 0;
+	}
+	.cookies > label {
+		font-size: 0.5rem;
+	}
+	.form input:not([type="checkbox"]) {
+		width: 25vw;
 	}
 }

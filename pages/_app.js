@@ -29,11 +29,12 @@ function MyApp({ Component, pageProps }) {
 		margin: "0 auto",
 		width: "fit-content",
 		height: "fit-content",
+		maxHeight: "none",
 		background: "none",
 		border: "none",
 		overflow: "visible",
 		zIndex: "9",
-		maxHeight: "100vh",
+		maxHeight: "70vh",
 	}
 	return (
 		<>

@@ -1,9 +1,25 @@
 /* autoprefixer grid: autoplace */
-.slide {
-	grid-column: 2;
-	grid-row: 2/4;
-	margin: 0 auto;
-}
 .dontAnimate * {
 	animation-play-state: paused;
+}
+.about,
+.concerts {
+	grid-row: 1/4;
+	grid-column: 2/4;
+	justify-self: center;
+	align-self: center;
+}
+.work {
+	grid-row: 1/4;
+	grid-column: 1/3;
+	justify-self: center;
+	align-self: center;
+}
+
+@media (max-width: 600px) {
+	.about,
+	.concerts,
+	.work {
+		order: 1;
+	}
 }

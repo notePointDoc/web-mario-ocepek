@@ -45,19 +45,20 @@ const slideObject = {
 }
 //
 // COMPONENT
-const Slide = (props) => {
+const Slide = ({ state }) => {
 	// Constants
-	const slide = slideObject[props.state]
+	const slide = slideObject[state]
+	console.log(state)
 	const ref = useRef()
 	useAnimation(ref, styles)
 	// ComponentReturn
 	return (
-		<div className={`${styles.slide} ${styles.dontAnimate}`} ref={ref}>
+		<div className={`${styles[state]} ${styles.dontAnimate}`} ref={ref}>
 			<SlideItem
 				elements={slide.elements}
 				vectors={slide.vectors}
 				img={slide.img}
-				state={props.state}
+				state={state}
 			>
 				{points}
 			</SlideItem>

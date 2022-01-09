@@ -1,4 +1,8 @@
-.aboutWrapper {
-	display: grid;
-	grid-auto-flow: row;
+.aboutWrapper > div {
+	margin-bottom: 10rem;
+}
+@media (max-width: 600px) {
+	.aboutWrapper {
+		overflow: hidden;
+	}
 }

@@ -10,7 +10,7 @@ const AboutText = (props) => {
 	return (
 		<>
 			<h1 className={`${styles[`${props.state}-title`]} ${styles.h1}`}>{title}</h1>
-			<p className={`${styles[`${props.state}-parahraph`]} ${styles.p}`}>
+			<p className={`${styles[`${props.state}-paragraph`]} ${styles.p}`}>
 				{paragraph}
 			</p>
 		</>

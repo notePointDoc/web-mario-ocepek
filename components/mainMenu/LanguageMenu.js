@@ -2,9 +2,9 @@ import React from "react"
 import { spanishFlag, englishFlag } from "../../assets/vectors/mainMenu"
 import styles from "./languageMenu.module.css"
 // COMPONENT
-const LanguageMenu = (props) => {
+const LanguageMenu = ({ dispatchGlobal }) => {
 	// Constants
-	const dispatchGlobal = props.dispatchGlobal
+
 	//
 	// Handlers
 	const changeToSpanish = () => {

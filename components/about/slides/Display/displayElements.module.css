@@ -30,8 +30,9 @@
 	z-index: 1;
 }
 .about-oval {
-	width: 11.6rem;
-	height: 41.8rem;
+	display: none;
+	width: 33%;
+	height: 133%;
 	border-radius: 50%/10rem;
 	bottom: -20%;
 	right: 40%;

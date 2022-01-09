@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react"
+import React, { useReducer, useMemo, useEffect, useState } from "react"
 import styles from "./listenList.module.css"
 import ListenItem from "./ListenItem"
 
@@ -28,10 +28,9 @@ const reduce = (prevState, action) => {
 }
 //
 // COMPONENT
-const ListenList = (props) => {
+const ListenList = ({ trackData }) => {
 	// State declaration
 	const [state, fetch] = useReducer(reduce, initState)
-	const trackData = props.trackData
 	const trackList = trackData.map((e) => {
 		const { name, preview_url, image } = e
 		return (
@@ -39,16 +38,12 @@ const ListenList = (props) => {
 				name={name}
 				id={preview_url}
 				audio={preview_url}
-				image={image[1].url}
+				image={image}
 				fetch={fetch}
 				key={preview_url}
 			></ListenItem>
 		)
 	})
-	// Use Effect to add Class
-
-	// Handles animation
-	// Spotify API
 	return <>{trackList}</>
 }
 

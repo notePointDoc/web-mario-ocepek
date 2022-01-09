@@ -17,3 +17,16 @@
 	top: -5%;
 	right: -50%;
 }
+@media (max-width: 600px) {
+	.image {
+		width: 10rem;
+		height: 10rem;
+		right: -30%;
+		top: -10%;
+	}
+	.collabContainer {
+		margin: 0 auto;
+		width: 60vw;
+		height: fit-content;
+	}
+}

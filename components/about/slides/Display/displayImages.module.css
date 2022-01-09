@@ -1,9 +1,8 @@
 /* FIRST SLIDE */
 .about-marioRedondo {
-	margin: 1rem;
 	width: 120%;
-	bottom: -1.5%;
-	left: 8.5%;
+	bottom: 0%;
+	left: 13%;
 	z-index: 3;
 }
 /* SECOND SLIDE */
@@ -34,14 +33,15 @@
 }
 /* THRID SLIDE */
 .concerts-satelliteStrike {
+	z-index: 9;
 	top: -6%;
 	left: 15%;
 }
 /* Images */
 .concerts-concertsOne {
+	z-index: 10;
 	top: 3%;
 	left: 20%;
-	z-index: 3;
 }
 .concerts-concertsTwo {
 	top: -35%;

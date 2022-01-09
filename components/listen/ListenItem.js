@@ -1,12 +1,10 @@
 import React, { useRef } from "react"
 import styles from "./listenItem.module.css"
 
-const ListenItem = (props) => {
+const ListenItem = ({ fetch, id, image, audioClassName, audio, name }) => {
 	// State Declaration
-	const fetch = props.fetch
 	const refAudio = useRef()
 	const refContainer = useRef()
-	const id = props.id
 	//Fetch Object with Item Instance References and data
 	const onClickHandler = () => {
 		fetch({ audio: refAudio.current, id: id, container: refContainer.current })
@@ -15,21 +13,18 @@ const ListenItem = (props) => {
 	const onEndedHandler = () => {
 		fetch({ audio: refAudio.current, id: id, container: refContainer.current })
 	}
+
 	return (
 		<div
 			className={`${styles.track} ${styles.inactive}`}
 			onClick={onClickHandler}
 			ref={refContainer}
 		>
-			<p>{props.name}</p>
-			<img src={props.image} alt='' animate={{ scale: "120%" }} />
+			<p>{name}</p>
+			<img src={image[1].url} alt='discs' animate={{ scale: "120%" }} />
 
-			<audio
-				ref={refAudio}
-				onEnded={onEndedHandler}
-				className={props.audioClassName}
-			>
-				<source src={props.audio} />
+			<audio ref={refAudio} onEnded={onEndedHandler} className={audioClassName}>
+				<source src={audio} />
 			</audio>
 		</div>
 	)

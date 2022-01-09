@@ -3,12 +3,11 @@ import styles from "./aboutSlide.module.css"
 import AboutText from "./AboutText"
 import Slide from "./Slide"
 
-const AboutSlide = (props) => {
-	const state = props.state
+const AboutSlide = ({ state }) => {
 	return (
 		<>
 			<AboutText className={styles.aboutText} state={state}></AboutText>
-			<Slide state={props.state}></Slide>
+			<Slide state={state}></Slide>
 		</>
 	)
 }
