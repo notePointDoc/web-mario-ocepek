@@ -8,12 +8,12 @@
 	content: " ";
 	display: inline;
 	position: absolute;
-	bottom: 2rem;
-	right: -8rem;
+	left: 50%;
+	top: 5%;
 	box-shadow: 5px 5px 30px #666666;
 	border-radius: 100%;
-	width: 17rem;
-	height: 17rem;
+	width: 90%;
+	height: 90%;
 	background-image: url("../../assets/listen/vinyl.svg");
 	background-size: cover;
 	z-index: -2;
@@ -28,7 +28,7 @@
 }
 @keyframes toPlace {
 	from {
-		transform: translateX(-7rem);
+		transform: translateX(-30%);
 	}
 	to {
 		transform: translateX(0);
