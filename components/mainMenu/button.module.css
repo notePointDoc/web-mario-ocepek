@@ -15,7 +15,6 @@
 }
 .listElement > a {
 	text-align: center;
-	font-size: small;
 	z-index: 1000;
 }
 @media (max-width: 600px) {

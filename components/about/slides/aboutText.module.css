@@ -2,8 +2,10 @@
 .p {
 	font-size: small;
 	font-style: oblique;
+	margin: 1rem;
 }
 .h1 {
+	margin: 1rem;
 	font-size: 5rem;
 }
 .about-title,
@@ -27,6 +29,7 @@
 	grid-row: 1;
 	grid-column: 3;
 	text-align: start;
+	margin-bottom: 3rem;
 }
 .work-paragraph {
 	grid-row: 2;

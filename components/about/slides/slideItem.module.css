@@ -15,12 +15,13 @@
 @media (max-width: 600px) {
 	.reference {
 		order: 0;
+		width: 100vw;
+		height: 100vw;
+	}
+	.reference[name="work"],
+	.reference[name="concerts"] {
 		width: 80vw;
 		height: 80vw;
-	}
-	.reference[name="work"] {
-		width: 55vw;
-		height: 65vw;
 	}
 	.reference > svg {
 		display: none;
