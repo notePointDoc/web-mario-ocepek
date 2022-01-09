@@ -25,11 +25,13 @@ function MyApp({ Component, pageProps }) {
 		zIndex: "10",
 	}
 	const content = {
+		left: "0",
 		position: "relative",
 		margin: "0 auto",
 		width: "fit-content",
 		height: "fit-content",
 		maxHeight: "none",
+		maxWidth: "none",
 		background: "none",
 		border: "none",
 		overflow: "visible",

@@ -78,6 +78,9 @@
 	.form > * {
 		margin: 0;
 	}
+	.form input {
+		font-size: 0.5rem;
+	}
 	.message > textarea {
 		height: 2rem;
 	}
