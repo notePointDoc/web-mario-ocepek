@@ -6,15 +6,15 @@ export default function (req, res) {
 		port: 465,
 		host: "smtp.gmail.com",
 		auth: {
-			user: "YOUR_EMAIL",
+			user: "lawebdelmario@gmail.com",
 			pass: password,
 		},
 		secure: true,
 	})
 	const { email, name, message } = req.body
 	const mailData = {
-		from: "YOUR_EMAIL",
-		to: "TO_EMAIL",
+		from: "lawebdelmario@gmail.com",
+		to: "correodelamierdaaa@gmail.com",
 		subject: `TU PAGINA WEB`,
 		text: message + " | Sent from: " + email,
 		html: `<div> 
@@ -24,7 +24,7 @@ export default function (req, res) {
 		</div>`,
 	}
 	transporter.sendMail(mailData, function (err, info) {
-		if (err) console.log(err)
+		if (err) console.log(err, "No se envían los putos correos")
 		else console.log(info)
 	})
 	res.status(200)
