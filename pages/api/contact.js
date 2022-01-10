@@ -14,7 +14,7 @@ export default function (req, res) {
 	const { email, name, message } = req.body
 	const mailData = {
 		from: "lawebdelmario@gmail.com",
-		to: "correodelamierdaaa@gmail.com",
+		to: "mario.ocepek.music@gmail.com",
 		subject: `TU PAGINA WEB`,
 		text: message + " | Sent from: " + email,
 		html: `<div> 
