@@ -42,7 +42,7 @@ function Scene() {
 	return (
 		<>
 			<a.spotLight intensity={1.2} color='black' position={[300, 400, 500]} />
-			<Stars position={[100, 200, -600]} />
+			<Stars position={[100, 200, -500]} />
 		</>
 	)
 }

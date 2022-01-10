@@ -3,8 +3,9 @@
 	-webkit-transition: all ease-in-out 500ms;
 	transform: scale(120%);
 	position: relative;
+	z-index: 1;
 }
-.active::before {
+.active::after {
 	content: " ";
 	display: inline;
 	position: absolute;
