@@ -2,6 +2,7 @@ import React, { useReducer, useState } from "react"
 import Menu from "../components/mainMenu/Menu"
 import { Language, languageList } from "../context/Language"
 import StarLayout from "./listen/StarLayout"
+import Footer from "../components/footer/Footer"
 
 const initialState = {
 	type: "about",
@@ -34,6 +35,7 @@ const reduce = (globalState, action) => {
 
 const Layout = ({ children, path }) => {
 	const [globalState, dispatchGlobal] = useReducer(reduce, initialState)
+
 	const handleGlobalStyles = () => {
 		let styles
 		if (path === "/listen") {
@@ -57,7 +59,7 @@ const Layout = ({ children, path }) => {
 			<>
 				<StarLayout></StarLayout>
 				<Language.Provider value={languageList[globalState.language]}>
-					<Menu dispatchGlobal={dispatchGlobal}></Menu>
+					<Menu dispatchGlobal={dispatchGlobal} />
 					{children}
 				</Language.Provider>
 				{handleGlobalStyles()}
@@ -69,6 +71,7 @@ const Layout = ({ children, path }) => {
 				<Language.Provider value={languageList[globalState.language]}>
 					<Menu dispatchGlobal={dispatchGlobal}></Menu>
 					{children}
+					<Footer />
 				</Language.Provider>
 			</>
 		)

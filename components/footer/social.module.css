@@ -1,0 +1,10 @@
+.socialContainer > * {
+	margin: 1rem;
+}
+
+@media (max-width: 600px) {
+	.socialContainer > * {
+		width: 0.1rem;
+		height: 0.1rem;
+	}
+}

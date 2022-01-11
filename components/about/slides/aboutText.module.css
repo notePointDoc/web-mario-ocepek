@@ -28,12 +28,15 @@
 .work-title {
 	grid-row: 1;
 	grid-column: 3;
-	text-align: start;
-	margin-bottom: 3rem;
+	line-height: 8rem;
+	text-indent: -10rem;
+	width: 20rem;
 }
 .work-paragraph {
 	grid-row: 2;
 	grid-column: 3;
+	text-align: baseline;
+	justify-self: baseline;
 }
 /*  */
 /* CONCERTS SLIDE */
@@ -50,5 +53,11 @@
 	}
 	.p {
 		order: 3;
+	}
+	.work-title {
+		width: auto;
+		text-indent: 0;
+		margin-bottom: 5rem;
+		text-align: center;
 	}
 }

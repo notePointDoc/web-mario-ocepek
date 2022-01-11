@@ -9,6 +9,9 @@
 	height: fit-content;
 	display: flex;
 	flex-flow: column;
+	animation-name: show;
+	animation-duration: 100ms;
+	animation-iteration-count: 1;
 }
 .image {
 	position: absolute;
@@ -27,5 +30,52 @@
 	.collabContainer {
 		width: 90vw;
 		height: fit-content;
+	}
+}
+.animated {
+	z-index: 100;
+	animation-name: appear;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-timing-function: ease-in-out;
+}
+@keyframes appear {
+	from {
+		transform: scale(0%);
+	}
+	50% {
+		transform: scale(150%);
+	}
+	to {
+		transform: scale(0%);
+	}
+}
+.marioFace {
+	width: 500px;
+	height: 500px;
+	z-index: 1000;
+	position: absolute;
+	top: 0;
+	background-image: url("../../assets/collab/CaraMarioRecortada.png");
+
+	background-size: contain;
+	background-repeat: no-repeat;
+	animation-name: appear;
+	animation-duration: 1.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in-out;
+}
+@keyframes appear {
+	from {
+		transform: scale(0%) rotate(0deg);
+	}
+	33% {
+		transform: scale(150%) rotate(360deg);
+	}
+	66% {
+		transform: scale(150%) rotate(700deg);
+	}
+	to {
+		transform: scale(0%) rotate(750deg);
 	}
 }

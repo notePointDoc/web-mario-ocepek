@@ -2,6 +2,7 @@
 	position: relative;
 	padding: 1rem 2rem;
 	margin: 1rem;
+	transition: transform 100ms ease-in-out;
 }
 .listElement > svg {
 	width: 100%;
@@ -12,10 +13,14 @@
 	left: 50%;
 	transform: translate(-50%, -50%);
 	z-index: -2;
+	transition: transform 100ms ease-in-out;
 }
 .listElement > a {
 	text-align: center;
 	z-index: 1000;
+}
+.listElement:hover {
+	transform: scale(110%);
 }
 @media (max-width: 600px) {
 	.listElement {

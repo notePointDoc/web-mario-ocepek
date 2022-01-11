@@ -52,7 +52,7 @@ function MyApp({ Component, pageProps }) {
 					}}
 					style={{ overlay: overlay, content: content }}
 				>
-					<Collab></Collab>
+					<Collab setIsModalOpen={setIsModalOpen}></Collab>
 				</Modal>
 				<Component {...pageProps} />
 			</Layout>

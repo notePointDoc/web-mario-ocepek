@@ -1,0 +1,8 @@
+.footer {
+	display: flex;
+	flex-flow: column nowrap;
+	height: 10vw;
+	justify-content: space-around;
+	align-items: center;
+	margin: 2rem;
+}

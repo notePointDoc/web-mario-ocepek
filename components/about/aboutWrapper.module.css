@@ -1,4 +1,4 @@
-.aboutWrapper > div {
+.aboutwrapper > div :not(last-child) {
 	margin-bottom: 10rem;
 }
 @media (max-width: 600px) {

@@ -6,26 +6,28 @@ export default function (req, res) {
 		port: 465,
 		host: "smtp.gmail.com",
 		auth: {
-			user: "YOUR_GMAIL",
+			user: "lawebdelmario@gmail.com",
 			pass: password,
 		},
 		secure: true,
 	})
-	const { email, name, message } = req.body
+	const { email, userName, message } = req.body
 	const mailData = {
 		from: "lawebdelmario@gmail.com",
 		to: "mario.ocepek.music@gmail.com",
 		subject: `TU PAGINA WEB`,
 		text: message + " | Sent from: " + email,
 		html: `<div> 
-		<h1>Nombre: ${name}</h1>
+		<h1>Nombre: ${userName}</h1>
 		<p> ${message}</p>
-		<p> Contacto: ${email}</p>
+		<p> Contacto: ${userName}</p>
 		</div>`,
 	}
 	transporter.sendMail(mailData, function (err, info) {
-		if (err) console.log(err, "No se envían los putos correos")
-		else console.log(info)
+		if (err) {
+			res.status(400)
+		} else {
+			res.status(200).json({ message: "Todo bien!" })
+		}
 	})
-	res.status(200)
 }
