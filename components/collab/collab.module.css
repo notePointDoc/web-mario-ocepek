@@ -55,17 +55,20 @@
 	height: 500px;
 	z-index: 1000;
 	position: absolute;
-	top: 0;
+	top: 0%;
+	bottom: 50%;
+	transform: translate(-50%, -50%);
 	background-image: url("../../assets/collab/CaraMarioRecortada.png");
 
 	background-size: contain;
 	background-repeat: no-repeat;
-	animation-name: appear;
+	animation-name: face;
 	animation-duration: 1.5s;
 	animation-iteration-count: 1;
 	animation-timing-function: ease-in-out;
 }
-@keyframes appear {
+
+@keyframes face {
 	from {
 		transform: scale(0%) rotate(0deg);
 	}
@@ -73,7 +76,7 @@
 		transform: scale(150%) rotate(360deg);
 	}
 	66% {
-		transform: scale(150%) rotate(700deg);
+		transform: scale(170%) rotate(700deg);
 	}
 	to {
 		transform: scale(0%) rotate(750deg);
