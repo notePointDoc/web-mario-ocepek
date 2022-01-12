@@ -26,3 +26,6 @@ a {
 #__next {
 	position: relative;
 }
+.ReactModal_Body--open {
+	overflow: hidden;
+}

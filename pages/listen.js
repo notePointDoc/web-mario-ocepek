@@ -125,7 +125,7 @@ export async function getStaticProps() {
 
 	return {
 		props: { trackData: data },
-		revalidate: 43200,
+		revalidate: 120,
 	}
 }
 export default listen

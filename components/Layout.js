@@ -35,47 +35,15 @@ const reduce = (globalState, action) => {
 
 const Layout = ({ children, path }) => {
 	const [globalState, dispatchGlobal] = useReducer(reduce, initialState)
-
-	const handleGlobalStyles = () => {
-		let styles
-		if (path === "/listen") {
-			styles = (
-				<style jsx global>{`
-					body {
-						background: black;
-					}
-					a {
-						text-decoration: none;
-						color: white;
-						z-index: 1;
-					}
-				`}</style>
-			)
-		}
-		return styles
-	}
-	if (path === "/listen") {
-		return (
-			<>
-				<StarLayout></StarLayout>
-				<Language.Provider value={languageList[globalState.language]}>
-					<Menu dispatchGlobal={dispatchGlobal} />
-					{children}
-				</Language.Provider>
-				{handleGlobalStyles()}
-			</>
-		)
-	} else {
-		return (
-			<>
-				<Language.Provider value={languageList[globalState.language]}>
-					<Menu dispatchGlobal={dispatchGlobal}></Menu>
-					{children}
-					<Footer />
-				</Language.Provider>
-			</>
-		)
-	}
+	return (
+		<>
+			<StarLayout></StarLayout>
+			<Language.Provider value={languageList[globalState.language]}>
+				<Menu dispatchGlobal={dispatchGlobal} />
+				{children}
+			</Language.Provider>
+		</>
+	)
 }
 
 export default Layout
