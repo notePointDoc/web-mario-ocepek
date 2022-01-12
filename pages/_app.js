@@ -30,20 +30,17 @@ function MyApp({ Component, pageProps }) {
 		margin: "0 auto",
 		width: "fit-content",
 		height: "fit-content",
-		maxHeight: "none",
-		maxWidth: "none",
 		background: "none",
 		border: "none",
 		overflow: "visible",
 		zIndex: "9",
-		maxHeight: "70vh",
 	}
 	return (
 		<>
 			<Layout path={router.pathname}>
 				<Modal
+					preventScroll={false}
 					isOpen={isModalOpen}
-					shouldCloseOnEsc={true}
 					shouldCloseOnEsc={true}
 					shouldFocusAfterRender={true}
 					onRequestClose={() => {

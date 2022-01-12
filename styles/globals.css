@@ -26,6 +26,9 @@ a {
 #__next {
 	position: relative;
 }
-.ReactModal_Body--open {
+.ReactModal__Body--open {
 	overflow: hidden;
+}
+.ReactModal__Overlay {
+	overflow: scroll;
 }
