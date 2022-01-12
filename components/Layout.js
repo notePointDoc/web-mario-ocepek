@@ -37,7 +37,7 @@ const Layout = ({ children, path }) => {
 	const [globalState, dispatchGlobal] = useReducer(reduce, initialState)
 	return (
 		<>
-			<StarLayout></StarLayout>
+			{path === "/listen" && <StarLayout></StarLayout>}
 			<Language.Provider value={languageList[globalState.language]}>
 				<Menu dispatchGlobal={dispatchGlobal} />
 				{children}
