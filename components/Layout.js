@@ -41,7 +41,7 @@ const Layout = ({ children, path }) => {
 			<Language.Provider value={languageList[globalState.language]}>
 				<Menu dispatchGlobal={dispatchGlobal} />
 				{children}
-				<Footer />
+				<Footer path={path} />
 			</Language.Provider>
 		</>
 	)

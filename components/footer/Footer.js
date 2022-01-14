@@ -2,11 +2,11 @@ import React from "react"
 import Social from "./Social"
 import styles from "./footer.module.css"
 
-const Flooter = () => {
+const Flooter = ({ path }) => {
 	return (
 		<footer className={styles.footer}>
-			<Social></Social>
-			<p>Made by Abe</p>
+			<Social path={path}></Social>
+			<p style={{ color: path === "/listen" ? "white" : "black" }}>Made by Abe</p>
 		</footer>
 	)
 }
