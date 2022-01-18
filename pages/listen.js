@@ -1,6 +1,5 @@
 import React from "react"
 import Listen from "../components/listen/Listen"
-import StarLayout from "../components/listen/StarLayout"
 // PAGE
 const listen = ({ trackData }) => {
 	return (
@@ -9,7 +8,6 @@ const listen = ({ trackData }) => {
 		</>
 	)
 }
-
 // API CALL TO GET DISCOS FOR STATIC GENERATION
 export async function getStaticProps() {
 	var axios = require("axios")

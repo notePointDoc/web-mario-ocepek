@@ -1,9 +1,7 @@
 import React from "react"
 import styles from "./displayElements.module.css"
 
-const DisplayElements = (props) => {
-	const elements = props.elements
-	const currentState = props.currentState
+const DisplayElements = ({ elements, currentState }) => {
 	const divElements = elements.map((e) => {
 		return (
 			<div

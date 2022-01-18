@@ -1,5 +1,5 @@
 import About from "../components/about/About.js"
-import { useRouter } from "next/router"
+
 import Modal from "react-modal"
 //
 // APP COMPONENT

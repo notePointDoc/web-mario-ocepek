@@ -23,7 +23,12 @@ const ListenItem = ({ fetch, id, image, audioClassName, audio, name }) => {
 			<p>{name}</p>
 			<img src={image[1].url} alt='discs' animate={{ scale: "120%" }} />
 
-			<audio ref={refAudio} onEnded={onEndedHandler} className={audioClassName}>
+			<audio
+				ref={refAudio}
+				onEnded={onEndedHandler}
+				className={audioClassName}
+				preload='true'
+			>
 				<source src={audio} />
 			</audio>
 		</div>
