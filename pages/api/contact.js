@@ -6,15 +6,15 @@ export default function (req, res) {
 		port: 465,
 		host: "smtp.gmail.com",
 		auth: {
-			user: "lawebdelmario@gmail.com",
+			user: "YOUR_GMAIL.com",
 			pass: password,
 		},
 		secure: true,
 	})
 	const { email, userName, message } = req.body
 	const mailData = {
-		from: "lawebdelmario@gmail.com",
-		to: "mario.ocepek.music@gmail.com",
+		from: "YOUR_GMAIL.com",
+		to: "SEND_TO@gmail.com",
 		subject: `TU PAGINA WEB`,
 		text: message + " | Sent from: " + email,
 		html: `<div> 
